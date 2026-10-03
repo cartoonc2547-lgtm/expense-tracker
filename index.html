@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Expense Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <h1>Expense Tracker</h1>
+    <p class="subtitle">บันทึกรายรับและรายจ่ายของคุณ</p>
+
+    <section class="balance-card">
+      <p>ยอดคงเหลือ</p>
+      <h2 id="balance">฿0</h2>
+    </section>
+
+    <section class="summary">
+
+      <div class="income-box">
+        <p>รายรับ</p>
+        <h3 id="income">฿0</h3>
+      </div>
+
+      <div class="expense-box">
+        <p>รายจ่าย</p>
+        <h3 id="expense">฿0</h3>
+      </div>
+
+    </section>
+
+    <section class="form-card">
+
+      <h2>เพิ่มรายการ</h2>
+
+      <input
+        id="title"
+        type="text"
+        placeholder="เช่น ค่าอาหาร"
+      >
+
+      <input
+        id="amount"
+        type="number"
+        placeholder="จำนวนเงิน"
+      >
+
+     <input
+       id="date"
+       type="date"
+      >
+
+ <select id="type">
+  <option value="expense">รายจ่าย</option>
+  <option value="income">รายรับ</option>
+</select>
+
+<div class="category-section">
+
+  <h3>เลือกหมวดหมู่</h3>
+
+<div class="category-grid">
+
+  <button
+    type="button"
+    class="category-btn active"
+    data-category="อาหาร"
+  >
+    <span>🍜</span>
+    <small>อาหาร</small>
+  </button>
+
+  <button
+    type="button"
+    class="category-btn"
+    data-category="กาแฟ"
+  >
+    <span>☕</span>
+    <small>กาแฟ</small>
+  </button>
+
+  <button
+    type="button"
+    class="category-btn"
+    data-category="เครื่องดื่ม"
+  >
+    <span>🥤</span>
+    <small>เครื่องดื่ม</small>
+  </button>
+
+  <button
+    type="button"
+    class="category-btn"
+    data-category="เดินทาง"
+  >
+    <span>🚌</span>
+    <small>เดินทาง</small>
+  </button>
+
+  <button
+    type="button"
+    class="category-btn"
+    data-category="ช้อปปิ้ง"
+  >
+    <span>🛍️</span>
+    <small>ช้อปปิ้ง</small>
+  </button>
+
+  <button
+    type="button"
+    class="category-btn"
+    data-category="บันเทิง"
+  >
+    <span>🎮</span>
+    <small>บันเทิง</small>
+  </button>
+
+</div>
+
+</div>
+
+      <button id="addBtn">
+        เพิ่มรายการ
+      </button>
+
+    </section>
+
+    <section class="history">
+
+      <h2>รายการล่าสุด</h2>
+
+      <div id="transactionList">
+        <p class="empty">ยังไม่มีรายการ</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
